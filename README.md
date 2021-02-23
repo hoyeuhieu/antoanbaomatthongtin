@@ -8,6 +8,7 @@
   </p>
 </p
 
+<!-- About the project -->
 ### Vài điều về dự án
 
 - Viết thuật toán tại 2 file trong thư mục `src` lần lượt là `bigPow.js` và `reverseAlgorithm.js`
