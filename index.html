@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="tab-javascript"
+                data-toggle="tab"
+                href="#content-javascript"
+                role="tab"
+                aria-controls="content-javascript"
+                aria-selected="false"
+                onclick="reverseFunc()"
+              >
+                Thuật toán đảo ngược
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="tab-bootstrap"
+                data-toggle="tab"
+                href="#content-bootstrap"
+                role="tab"
+                aria-controls="content-bootstrap"
+                aria-selected="true"
+                onclick="powFunc()"
+              >
+                Thuật toán tính modulo của lũy thừa số mũ lớn nhất
+              </a>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <!-- Display 1 -->
+            <div
+              class="tab-pane fade show"
+              id="content-bootstrap"
+              role="tabpanel"
+              aria-labelledby="tab-bootstrap"
+            >
+              <div
+                class="container"
+                style="border: 1px solid rgb(221, 219, 219)"
+              >
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <div
+                      class="algorithm-describe text-primary pb-2"
+                      style="font-weight: 500; font-size: 20"
+                    >
+                      Input : a, N
+                      <br />
+                      Output : a<sup>-1</sup>
+                    </div>
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-6">
+                          <label for="exampleInputEmail1">Nhập vào số a</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="reverse-a"
+                            aria-describedby="emailHelp"
+                            placeholder="Nhập vào số a"
+                          />
+                        </div>
+                        <div class="form-group col-6">
+                          <label for="exampleInputPassword1"
+                            >Nhập vào số N</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="reverse-n"
+                            placeholder="Nhập vào số n"
+                          />
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="reverseHandle()"
+                      >
+                        Tính toán
+                      </button>
+                    </form>
+                    <div class="row mt-3">
+                      <div class="col-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Display 2  -->
+            <div
+              class="tab-pane fade show"
+              id="content-javascript"
+              role="tabpanel"
+              aria-labelledby="tab-javascript"
+            >
+              <div
+                class="container"
+                style="border: 1px solid rgb(221, 219, 219)"
+              >
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <div
+                      class="algorithm-describe text-primary pb-2"
+                      style="font-weight: 500; font-size: 20"
+                    >
+                      Input : a, x, N
+                      <br />
+                      Output : a<sup>x</sup> mod N
+                    </div>
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-4">
+                          <label for="exampleInputEmail1">Nhập vào số a</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="pow-a"
+                            aria-describedby="emailHelp"
+                            placeholder="Nhập vào số a"
+                          />
+                        </div>
+                        <div class="form-group col-4">
+                          <label for="exampleInputPassword1"
+                            >Nhập vào số x</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="pow-x"
+                            placeholder="Nhập vào số x"
+                          />
+                        </div>
+                        <div class="form-group col-4">
+                          <label for="exampleInputEmail1">Nhập vào số N</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="pow-n"
+                            aria-describedby="emailHelp"
+                            placeholder="Nhập vào số n"
+                          />
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="powHandle()"
+                      >
+                        Tính toán
+                      </button>
+                    </form>
+                    <div class="row mt-3">
+                      <div class="col-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <strong >Lịch sử:</strong>
+          <div class="mt-2" id="history"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./src/main.js"></script>
+</html>
